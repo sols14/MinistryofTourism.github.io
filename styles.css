@@ -1,0 +1,1023 @@
+/* Color Scheme */
+/* #008056 - Deep Emerald Green
+#d16a5e - Bright Terracotta
+#e0b849 - Vivid Gold
+#0ac9c3 - Vivid Aquamarine
+#fcefd7- Soft Almond Cream
+#825433 - Rustic Brown
+#2C3E50 - Charcoal Grey
+ */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    background-color: #008056;
+    position: relative;
+    margin: 0;
+    padding-top: 0px;
+}
+body{
+    background-color: #fcefd7;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.6 em; 
+    color: #2C3E50;
+}
+h1{
+text-align: center;
+color:#2C3E50;
+padding: 15px 0px 10px 0px;
+justify-content: center;
+}
+h2{
+    color: #0ac9c3;
+    text-align: center;
+}
+
+ #banner{
+    width: 100%;
+    padding:0px;
+    margin: none;
+    
+ }
+
+/* ---------------------nav bar css------------------------ */
+nav{
+    margin: 0;
+    padding: 0px 5px;
+}
+
+
+nav ul{
+    background-color: #008056;
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    padding: 0; 
+    font-family: Helvetica, sans-serif;
+}
+
+nav ul li{
+    display: inline-block;
+    position: relative;
+}
+nav ul li a{
+    display: block;
+    padding: 20px 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    font-size: 14pt;
+}
+
+nav ul li ul.dropdown li{
+    display: block;
+    
+}
+nav ul li ul.dropdown{
+   width: 100%;
+   background-color: #008056;
+   position: absolute;
+   z-index: 999;
+   display: none;
+   /* border-radius: 15px;
+ */}
+
+nav ul li a:hover{
+   background-color: #0ac9c3;
+   /* border-radius: 15px; */
+}
+nav ul li:hover ul.dropdown{
+    display: block;
+    box-shadow: 0px 8px 18px 0px rgba(0,0,0,0.2);
+ }
+
+nav ul li a.active{
+    background-color: #0ac9c3;
+ }
+nav ul li #navlogo{
+    height: 70px;
+    padding: 0px 25px;
+}
+/* --------------------------------------------- */
+
+
+
+/* footer */
+footer{
+    background-color: #d16a5e;
+    margin: 0;
+    padding: 20px;
+    color: white;
+    font-size: 16pt;
+    text-align: center;
+    justify-content: center;
+}
+
+/* section{
+    padding: 10px 0px;
+} */
+
+
+
+/* --------------------------------------------- */
+/* login button that goes on every page */
+#loginEveryPg{
+    background-color: #825433;
+    padding: 10px;
+    border-radius: 15px;
+    color: #fcefd7;
+    border: none;
+    display: block;
+    margin: auto;
+    font-weight: bold;
+    font-size: 18pt;
+}
+#loginEveryPg:hover{
+    background-color: #e0b849;
+}
+.loginPg{
+    padding: 27px 0px;
+}
+/* --------------------------------------------- */
+
+
+.testcontainer textarea{
+    height: 50px;
+    width: 300px;
+}
+
+
+/* --------------------------------------------- */
+/* homepage content */
+main.homeContainer section p{
+    font-size: 14pt;
+    text-align: left;
+    margin: 0% 10%;
+}
+main.homeContainer section ul a {
+    color: #008056;
+    text-decoration: none;
+}
+main.homeContainer section ul a:hover {
+    color: #0ac9c3;
+    text-decoration: none;
+}
+
+main.homeContainer .purpose p{
+    font-size: 18pt;
+    text-align: center;
+}
+
+.privPolicy dl dd{
+    text-indent: 25px;
+}
+.privPolicy dl dd a{
+    text-decoration: none;
+    color: #008056;
+}
+.privPolicy dl dd a:hover{
+    text-decoration: none;
+    color: #0ac9c3;
+}
+.privPolicy dl dt{
+    font-weight: bold;
+    color: #d16a5e;
+}
+/* --------------------------------------------- */
+/*Homepage grid */
+
+.homeContainer{
+    display:grid;
+    max-height:auto;
+    max-width:auto;
+    justify-content: center;
+    
+
+    grid-template-areas: 
+    "header     header"
+    "purpose    purpose"
+    "image      image"
+    "guidlines  privacy"
+    "loginPg    loginPg"
+    "footer     footer"
+    ;
+
+    grid-template-rows: 100px 220px 500px 600px 100px 80px;
+    grid-template-columns: repeat(2, 2fr);
+
+    font-size: 25px;
+    /* gap:10px; */
+
+}
+
+#homeTitle{
+    grid-area: header;
+}
+
+.purpose{
+    grid-area: purpose;
+    border-bottom: 2px dashed#0ac9c3;
+}
+
+.homeImage{
+    grid-area: image;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px dashed #0ac9c3;
+}
+#homeImg{
+    max-width: 100%;
+    display: block;
+}
+
+.guidlines{
+    grid-area: guidlines;
+    padding: 10px 25px;
+    margin: 0% 0% 0% 5%;
+    justify-content: center;
+    text-align: left;
+    border-right: 2px dashed#0ac9c3;
+}
+.privPolicy{
+    grid-area: privacy;
+    margin: 0% 0% 0% 1%;
+    justify-content: center;
+    text-align: left;
+}
+
+.loginPgH{
+    grid-area: loginPg;
+    border-top: 2px dashed#0ac9c3;
+    padding: 22px;
+    
+}
+
+.homeContainer footer{
+    grid-area: footer;
+}
+
+/* --------------------------------------------- */
+
+
+/* --------------------------------------------- */
+/*CSS GRID Testimonials */
+
+
+    fieldset #inq {
+        width:275px; height:275px;
+    }
+
+    fieldset #com {
+        width:250px; height:250px;
+    }
+
+    textfield{
+        width:250;
+         height:250px;
+    }
+
+h3#registerNow, h3#registerNow a{
+text-align: center;
+text-decoration: 0;
+color: #008056;
+font-size: 16pt;
+padding: 10px;
+}
+
+h3#registerNow a:hover{
+    color: #2C3E50;
+}
+    /*CSS */
+    
+.testcontainer{
+    display:grid;
+    max-height:auto;
+    max-width:auto;
+
+    grid-template-areas: 
+    "header  header"
+    "forminquiry formcomms"
+    "forminquiry formcomms"
+    "comm1  comm2"
+    "comm3  comm3"
+    "comm4  comm5"
+    "login  login"
+    "footer footer"
+    ;
+
+    
+    grid-template-rows: 1fr 3fr 2fr 2fr 2fr 2fr 2fr 1fr;
+    grid-template-columns: repeat(2, 2fr);
+
+    gap:10px;
+}
+/*5 Star Review*/
+
+
+.Rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    /* border: none; */
+}
+
+.Rating input {
+    display: none; 
+}
+
+.Rating label {
+    font-size: 40px;
+    color: dimgray;
+    cursor: pointer;
+    transition: color 0.5s hard;
+}
+
+.Rating input:checked ~ label {
+    color: goldenrod; 
+}
+
+.Rating label:hover,
+.Rating label:hover ~ label {
+    color: yellow; 
+}
+
+/*Grid Items*/
+
+#testimonials{ 
+    grid-area: header;
+    border-bottom: 2px dashed #0ac9c3;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.inquiry{ 
+    grid-area: forminquiry;
+    border: 2px solid #008056;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.comments{
+     grid-area: formcomms;
+     border: 2px solid #008056;
+     justify-items: center;
+    align-items: center;
+    }
+
+.comment1{
+     grid-area: comm1;
+     border: 2px solid #d16a5e;
+     justify-items: center;
+     align-items: center;
+    }
+
+.comment2{
+     grid-area: comm2;
+     border: 2px solid #d16a5e;
+     justify-items: center;
+    align-items: center;
+    }
+
+.comment3{ 
+    grid-area: comm3;
+    border: 2px solid #2C3E50;
+    justify-items: center;
+    align-items: center;
+}
+
+.comment4{
+     grid-area: comm4;
+     border: 2px solid #0ac9c3;
+     justify-items: center;
+    align-items: center;
+    }
+
+.comment5{ 
+    grid-area: comm5;
+    border: 2px solid #0ac9c3;
+    justify-items: center;
+    align-items: center;
+}
+
+.login{
+    grid-area: login;
+    border-bottom: 2px dashed #0ac9c3;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+.copy{
+    grid-area: footer;
+    border: none;
+    justify-items: center;
+    align-items: center;
+}
+/* --------------------------------------------- */
+
+/* --------------------------------------------- */
+/*CSS Hotels*/
+
+.hotelcontainer{
+
+    display:grid;
+    max-height:fit-content;
+    max-width:fit-content;
+
+    grid-template-areas: 
+    "header header header"
+    "aside mainP asideR"
+    "main mainP mainR"
+    "section section section"
+    "login  login login"
+    "footer footer footer"
+    ;
+
+    grid-template-rows: 100px 300px 300px 200px 100px 80px;
+    grid-template-columns: repeat(3, 2fr);
+
+    font-size:30px;
+
+    gap:10px;
+}
+
+.hotelcontainer ul{
+
+    justify-items: center;
+    align-items: center;
+
+}
+
+.hotelTITLE{
+    grid-area: header;
+    border-bottom: 3px dashed #0ac9c3;
+    justify-items: center;
+    align-items: center;
+}
+
+.hotList{
+    
+    grid-area: aside;
+    border: 3px solid #d16a5e;
+    justify-items: center;
+    align-items: center;
+    
+}
+
+
+.Rating{
+    grid-area: asideR;
+    border: 3px solid #d16a5e;
+    justify-items: center;
+    align-items: center;
+}
+
+.restList{
+    grid-area: main;
+    border: 3px solid #e0b849;
+    justify-items: center;
+    align-items: center;
+}
+.iframeRest{
+    width:620px;
+    height:600px;
+}
+
+.REST{
+    grid-area: mainP;
+    border: 3px solid #2C3E50;
+    justify-items: center;
+    align-items: center;
+}
+
+.restRating{
+    grid-area: mainR;
+    border: 3px solid #e0b849;
+    justify-items: center;
+    align-items: center;
+}
+
+.idk{
+    grid-area: section;
+    border: 3px solid #0ac9c3;
+    justify-items: center;
+    align-items: center;
+}
+
+.hotloginPg{
+    padding: 20px;
+    grid-area: login;
+    justify-items: center;
+    align-items: center;
+}
+
+.hotelFooter{
+    grid-area: footer;
+    border: none;
+    justify-items: center;
+    align-items: center;
+}
+/*  */
+/*Login Grid*/
+.loginContainer{
+    display:grid;
+    max-height:auto;
+    max-width:auto;
+
+    grid-template-areas: 
+    "header  header"
+    "main  main"
+    "ques ques"
+    
+    "register  register"
+    "footer  footer"
+    ;
+
+    grid-template-rows: 100px 250px 100px 65px 75px;
+    grid-template-columns: repeat(2, 2fr);
+
+    font-size: 25px;
+    gap:10px;
+
+}
+
+#loginbutton{
+    padding: 10px;
+    font-size: 15px;
+    background-color: #008056;
+    color: #fcefd7;
+    border: none;
+    border-radius: 10px;
+}
+
+#loginbutton:hover{
+    background-color: #0ac9c3;
+}
+
+.loginTitle{
+    grid-area:header;
+}
+
+.loginInfo{  /* form that */
+    grid-area:main;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#loginQues{
+    grid-area:ques;
+    padding: 20px 0px 5px 0px;
+}
+
+
+/*register buttons on both register page and login page */
+.registerNow{
+    padding: 10px;
+    font-size: 20px;
+    background-color: #008056;
+    color: #fcefd7;
+    border: none;
+    border-radius: 10px
+}
+.registerNow:hover{
+    background-color: #0ac9c3;
+}
+
+.reg_nowButton{
+   grid-area:register; 
+   justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.loginContainer footer{
+    grid-area:footer;
+}
+.loginContainer input[type="text"]{
+    font-size: 18px;
+    padding:10px;
+}
+
+/* --------------------------------------------- */
+/* Registration Page Grid */
+.regContainer{
+    display:grid;
+    max-height: auto;
+    max-width:auto;
+
+    grid-template-areas: 
+
+    "header "
+    "bInfo"
+    "pInfo "
+    "footer"
+    ;
+
+    grid-template-rows: 100px 300px 950px  75px;
+    grid-template-columns: repeat(1, 2fr);
+
+    font-size: 30px;
+    gap:10px;
+
+    
+    text-align: center;
+}
+
+#regTitle{
+    grid-area: header;
+}
+
+
+
+#BasicInfo{
+    grid-area: bInfo;
+    
+    
+}
+
+#PersonalInfo{
+    grid-area: pInfo;
+    
+}
+
+.regContainer footer{
+    grid-area: footer;
+}
+
+.regContainer select{
+    font-size: 18px;
+    line-height: 1.5;
+    padding:10px;
+}
+
+.regContainer select option {
+    font-size: 18px;
+    padding:10px
+}
+
+.regContainer textarea{
+    font-size: 18px;
+    line-height: 1.5;
+    width: 450px;
+    height:80px;
+    padding:10px;
+}
+
+.regContainer input[type="text"],input[type="password"],input[type="email"]{
+    font-size: 18px;
+    padding:10px;
+}
+
+.regContainer input[type="date"]{
+    font-size: 18px;
+    padding:10px;
+}
+
+/* --------------------------------------------- */
+/* About & Contact Us Grid*/
+.ACcontainer{
+    display:grid;
+    max-height: 1000;
+    max-width:auto;
+
+    grid-template-areas: 
+
+    "header header "
+    "Aheader Aheader  "
+    "Amain Amain "
+    "Cheader Cheader "
+    "Cmain Cmain "
+    "Cmain Cmain "
+    "button1 button2"   
+    "footer footer " 
+    ;
+
+    grid-template-rows: 100px 75px 200px 75px 150px 75px 100px;
+    grid-template-columns: repeat(2, 2fr);
+
+    font-size: 30px;
+    /* gap:10px; */
+}
+
+#aboutTitle{
+    grid-area:header;
+    border-bottom: 3px dashed #0ac9c3;
+}
+
+#Atitle{
+    grid-area:Aheader;
+    border-bottom: 3px dashed #0ac9c3;
+}
+
+.Abs{
+    grid-area:Amain;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    /* border: 3px solid #2C3E50; */
+}
+
+#Ctitle{
+    grid-area:Cheader;
+    padding: 10px;
+    border: 3px solid #008056;
+}
+
+.Con{
+    grid-area:Cmain;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0px 10px 0px;
+    border-bottom: 3px dashed #0ac9c3
+    
+}
+.loginPgA{
+    grid-area:button2;
+    border: none;
+    padding: 22px 0px;
+}
+
+.inquiryPg{
+    grid-area:button1;
+    border: none;
+}
+
+#inquiryPg{
+    padding: 10px;
+    font-size: 18pt;
+    background-color: #008056;
+    color: #fcefd7;
+    border: none;
+    border-radius: 10px;
+    display: block;
+    margin: auto;
+}
+.inquiryPg{
+    padding: 22px 0px;
+}
+#inquiryPg:hover{
+    background-color: #0ac9c3;
+}
+
+.ACcontainer footer{
+    grid-area:footer;
+    border:none;
+}
+
+
+
+/*Event Page Grid*/
+
+.eventsContainer{
+
+    display:grid;
+    max-height: 1500px;
+    max-width:auto;
+
+    grid-template-areas: 
+
+    "header"
+        "sub1"
+        "main1"
+        "img1"
+        "main2"
+        "img2"
+        "main3"
+        "img3"
+        "sub"
+        "section"
+        "login"
+        "footer"
+    ;
+
+    grid-template-rows: 
+    100px 100px 350px 200px 350px 200x 350px 200px  50px 200px 80px 100px;
+
+    grid-template-columns:2fr;
+    font-size: 25px;
+    gap:20px;
+}
+.eventsContainer h1,h2,h3{
+    font-weight: bold;
+    text-align: center;
+}
+#eveTitle{
+    grid-area:header;
+    
+}
+
+#subTitle{
+    grid-area:sub1;
+    padding: 10px;
+    border: 2px solid #008056;
+}
+
+#PLake{
+    grid-area:main1;
+    padding: 10px;
+    
+}
+
+.PlakePhoto img{
+    grid-area: img1;
+    display: grid;
+    max-width: 100%;
+    max-height: 200px;
+    justify-self: center;
+    align-self: center;
+    object-fit: cover;
+    border: 2px solid #d16a5e;
+}
+
+
+#MBeach{
+    grid-area: main2;
+    border-top: 2px solid #008056;
+    padding: 10px;
+}
+
+#MBeachPhoto img{
+    grid-area:img2;
+    display: grid;
+    max-width: 100%;
+    max-height: 200px;
+    justify-self: center;
+    align-self: center;
+    object-fit: cover;
+    border: 2px solid #d16a5e;
+
+}
+
+#CBS{
+    grid-area:main3;
+    border-top: 2px dashed #008056;
+    padding: 10px;
+}
+
+#CBSPhoto img{
+    grid-area:img3;
+    display: grid;
+    max-width: 100%;
+    max-height: 200px;
+    justify-self: center;
+    align-self: center;
+    object-fit: scale-down;
+    border: 2px solid green;
+}
+
+#dates{
+    grid-area: sub;
+    border-top: 3px dashed #0ac9c3;
+    padding: 15px;
+}
+#datesTable{
+    grid-area: section;
+    border: 3px solid gold;
+}
+div#datesTable{
+    justify-content: center;
+    text-align: center;
+    display: block;
+    margin: auto;
+}
+.eventsContainer.loginPg{
+    grid-area: login;
+
+}
+.eventsContainer footer{
+    grid-area: footer;
+}
+
+/*Discover Page*/
+
+.discoverContainer{
+
+    display:grid;
+    max-height: 1500px;
+    max-width:auto;
+
+    grid-template-areas: 
+
+    "header"
+        "sub1"
+
+        "main1"
+        "main1"
+        "img1"
+
+        "main2"
+        "img2"
+        "img3"
+
+        "sub"
+        "section"
+
+        "login"
+        "footer"
+    ;
+
+    grid-template-rows: 
+    100px 100px 400px 150px 200px 350px 200px 200px  75px 350px 80px 100px;
+
+    grid-template-columns:2fr;
+    font-size: 25px;
+    gap:20px;
+}
+.discoverContainer h1,h2,h3{
+    font-weight: bold;
+    text-align: center;
+}
+#discoverTitle{
+    grid-area:header;
+    border: 2px solid #008056;
+}
+
+#sub1{
+    grid-area:sub1;
+    border: 2px solid #008056;
+}
+
+#Attract{
+    grid-area:main1;
+    border: 2px solid #0ac9c3;
+}
+
+#fort img{
+    grid-area: img1;
+    display: grid;
+    max-width: 100%;
+    max-height: 200px;
+    justify-self: center;
+    align-self: center;
+    object-fit: cover;
+    border: 2px solid #2C3E50;
+}
+
+/* .homeImage{
+    grid-area: image;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px dashed #0ac9c3;
+}
+#homeImg{
+    max-width: 100%;
+    display: block;
+} */
+
+#queens img{
+    grid-area:img2;
+    display: grid;
+    max-width: 100%;
+    max-height: 200px;
+    justify-self: center;
+    align-self: center;
+    object-fit: cover;
+    border: 2px solid #0ac9c3;
+
+}
+
+#culture{
+    grid-area:main2;
+    border: 2px solid #d16a5e;
+}
+
+#eman img{
+    grid-area:img3;
+    display: grid;
+    max-width: 100%;
+    max-height: 200px;
+    justify-self: center;
+    align-self: center;
+    object-fit: scale-down;
+    border: 2px solid #008056;
+}
+
+#subevents{
+    grid-area: sub;
+    border-top: 3px dashed #0ac9c3;
+    padding: 15px;
+}
+#carnival{
+    grid-area: section;
+    border: 3px solid #e0b849;
+}
+
+.eventsContainer.loginPg{
+    grid-area: login;
+
+}
+.eventsContainer footer{
+    grid-area: footer;
+}
